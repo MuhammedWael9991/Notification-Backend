@@ -1,7 +1,7 @@
 const express = require("express");
 const admin = require("firebase-admin");
 
-const serviceAccount = require("./firebase-key.json"); // حط ملف السيرفس اكاونت هنا
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
 
 // initialize firebase admin
 admin.initializeApp({
